@@ -29,13 +29,8 @@
     overflow-y: scroll;
 }
 
-@media (max-width: 1200px) {
-    *::-webkit-scrollbar {
-        visibility: hidden;
-    }
-}
 
-@media (min-width: 1850px) {
+@media (min-width: 767px) {
     *{
         font-size: 2vmin;
     }
