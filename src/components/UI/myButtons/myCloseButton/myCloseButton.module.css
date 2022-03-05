@@ -1,0 +1,19 @@
+.myCloseButton {
+    float: right;
+    opacity: 0.3;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    transition: all ease-in 0.2s;
+}
+
+.myCloseButton:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: all ease-in 0.2s;
+}
+
+.myCloseButton__div {
+    height: .2em;
+    width: 100%;
+}
