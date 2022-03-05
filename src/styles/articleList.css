@@ -1,0 +1,75 @@
+.article-list .article-list__article_list-table {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+.article-list .article-list__article_list-table .article-list__table-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.article-list .article-list__article_list-table .article-list__table-container .table-container__table .table-data__list-item {
+  border-radius: 0.2em;
+  padding: 0.3em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.2em;
+}
+.article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__table-header {
+  background-color: #95A5A6;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  position: sticky;
+  top: 0;
+}
+.article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__table-data .table-data__table-row {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__table-data .table-data__table-row:hover {
+  background-color: #c2c2c2;
+  cursor: zoom-in;
+}
+.article-list .table-container__table .table__col {
+  min-width: 1em;
+  text-align: center;
+}
+.article-list .table-container__table .table__col-1 {
+  flex-basis: 10%;
+}
+.article-list .table-container__table .table__col-2 {
+  flex-basis: 30%;
+}
+.article-list .table-container__table .table__col-3 {
+  flex-basis: 20%;
+}
+.article-list .table-container__table .table__col-4 {
+  flex-basis: 25%;
+}
+.article-list .table-container__table .table__col-5 {
+  flex-basis: 15%;
+}
+
+@media all and (max-width: 767px) {
+  .article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__table-header {
+    display: none;
+  }
+  .article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__table-data .table-data__list-item {
+    display: block;
+  }
+  .article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__col {
+    flex-basis: 100%;
+    display: flex;
+    padding: 0.1em 0;
+  }
+  .article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__col:before {
+    color: #6C7A89;
+    padding-right: 0.1em;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=articleList.css.map */
