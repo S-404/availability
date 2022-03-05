@@ -1,5 +1,5 @@
 import React from 'react';
-import MyCheckBox from "../UI/checkbox/myCheckBox";
+import MyCheckBox from "../UI/myCheckbox/myCheckBox";
 
 const FilterContainer = ({filter, handleCheckBox}) => {
     return (
