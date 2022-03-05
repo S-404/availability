@@ -1,0 +1,44 @@
+.myCheckBox{
+    margin: .2em 0;
+}
+
+.myCheckBox__button{
+    position: relative;
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+
+    vertical-align: top;
+    background: #ffffff;
+    border: 1px solid #bbc1e1;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: 0.3s;
+}
+
+
+
+.myCheckBox__button:checked::after {
+    color: white;
+}
+.myCheckBox__button::after {
+    content: '✓';
+    text-align: center;
+    right: -20%;
+    top: -20%;
+    position: relative;
+    font-weight: bold;
+    color: #dadada;
+}
+
+.myCheckBox__button:checked {
+    background-color: #679ece;
+}
+.myCheckBox__label{
+ margin-left: .1em;
+}
