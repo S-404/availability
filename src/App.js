@@ -4,6 +4,7 @@ import ArticleList from "./components/articleList/ArticleList";
 import {useFetching} from "./hooks/useFetching";
 import ArticleListService from "./services/articleListService";
 import {useDispatch} from "react-redux";
+import Modals from "./components/Modals";
 
 function App() {
     const dispatch = useDispatch();
@@ -15,6 +16,7 @@ function App() {
 
     return (
         <div className="App">
+            <Modals/>
             <ArticleListFilters
                 fetchArticleList={fetchArticleList}
             />
