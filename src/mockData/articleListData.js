@@ -116,7 +116,7 @@ export const articleList = [
         GROUP_OF_GOODS: 'Stationery',
         AVIN: 'OK',
         CATEGORY: 'Top100',
-        SIGNAL: true,
+        SIGNAL: false,
         STATUS: true
     },
 ]

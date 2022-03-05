@@ -1,4 +1,4 @@
-import {articleList} from "../mockData/data"
+import {articleList} from "../mockData/articleListData"
 
 export default class ArticleListService {
 
