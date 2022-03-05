@@ -12,7 +12,7 @@
 
       .ui_containers__ui_container {
 
-        .ui_container__header{
+        .ui_container__header {
           color: gray;
         }
 
@@ -39,6 +39,23 @@
       margin: .3em;
       border-radius: var(--border-radius-val);
       cursor: pointer;
+    }
+  }
+}
+
+
+@media all and (max-width: 767px) {
+  .filter-block {
+
+    .filter-block__filter_panel {
+      flex-direction: column;
+
+      .filter_panel__ui_containers {
+        flex-direction: column;
+        padding: .1em .3em;
+        margin-top: 5px;
+        justify-content: space-between;
+      }
     }
   }
 }

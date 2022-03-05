@@ -52,6 +52,20 @@
 }
 
 @media all and (max-width: 767px) {
+  .article-list {
+    position: relative;
+  }
+  .article-list .article-list__header {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-color);
+    padding: 0.3em;
+    width: 100%;
+    border-radius: 0 0 var(--border-radius-val) var(--border-radius-val);
+  }
+  .article-list .article-list__article_list-table {
+    max-height: unset;
+  }
   .article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__table-header {
     display: none;
   }

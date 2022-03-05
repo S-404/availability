@@ -31,4 +31,16 @@
   cursor: pointer;
 }
 
+@media all and (max-width: 767px) {
+  .filter-block .filter-block__filter_panel {
+    flex-direction: column;
+  }
+  .filter-block .filter-block__filter_panel .filter_panel__ui_containers {
+    flex-direction: column;
+    padding: 0.1em 0.3em;
+    margin-top: 5px;
+    justify-content: space-between;
+  }
+}
+
 /*# sourceMappingURL=articleListFilter.css.map */

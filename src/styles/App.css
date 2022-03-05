@@ -16,6 +16,7 @@
 
 :root {
     --border-radius-val: .5em;
+    --main-color:#b5e0e1
 }
 
 #root {
@@ -24,7 +25,7 @@
     align-items: flex-start;
     justify-content: center;
     height: 100vh;
-    background-color: #b5e0e1;
+    background-color: var(--main-color);
     overflow-y: scroll;
 }
 
