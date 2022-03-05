@@ -1,8 +1,11 @@
 import React from 'react';
 
-const ArticleListTableItem = ({article,columns}) => {
+const ArticleListTableItem = ({article,columns, selectArticle}) => {
     return (
-        <li className="table-data__list-item table-data__table-row">
+        <li
+            className="table-data__list-item table-data__table-row"
+            onClick={()=>selectArticle(article)}
+        >
             {columns.map((col, index) => (
                 <div
                     key={`article_${article.ID}_${col.key}_${index}`}
