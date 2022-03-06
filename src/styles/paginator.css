@@ -1,0 +1,25 @@
+.paginator {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5em;
+}
+.paginator .paginator__button {
+  padding: 0.2em;
+  margin-right: 0.2em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  border: 0.1em solid gray;
+  cursor: pointer;
+}
+.paginator .paginator__button:hover {
+  background-color: #95A5A6;
+}
+.paginator .paginator__button:active {
+  background-color: #708d70;
+}
+.paginator .paginator__button_current {
+  background-color: #9ad99a;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=paginator.css.map */

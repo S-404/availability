@@ -16,6 +16,8 @@
     background: white;
     border-radius: 1em;
     min-width: 90vw;
+    max-height: 90vh;
+    height: 100%;
 }
 
 .myModal.active {

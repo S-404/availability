@@ -57,8 +57,11 @@ const MyChart = ({graph}) => {
 
 
     return (
-        <div className='article-info__chart'>
-            <Line options={options} data={data}/>
+        <div className='article-info__chart-div'>
+            <div className={'chart-div__chart'}>
+                <Line options={options} data={data}/>
+            </div>
+
         </div>
 
 )
