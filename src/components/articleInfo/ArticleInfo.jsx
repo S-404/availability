@@ -2,13 +2,16 @@ import React, {useEffect, useState} from 'react';
 import MyInput from "../UI/myInput/myInput";
 import {useFetching} from "../../hooks/useFetching";
 import ArticleInfoService from "../../services/articleInfoService";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useFilteredArticleList} from "../../hooks/useArticleList";
 import '../../styles/articleInfo.scss'
 import MyChart from "./chart/myChart";
+import ArticleParameters from "./articleParameters/ArticleParameters";
+import {defineStatus} from "./articleParameters/helper";
+import NavButtons from "./NavButtons";
 
 const ArticleInfo = () => {
-
+    const dispatch = useDispatch()
     const selectedArticle = useSelector(state => state.selectedArticle);
     const modals = useSelector(state => state.modals);
     const articleList = useSelector(state => state.articleList);
@@ -35,54 +38,46 @@ const ArticleInfo = () => {
     }
 
 
-
     useEffect(() => {
-        if (artno.length) {
-            fetchArtnoInfo(+artno)
+        if (artno.length >= 5) {
+            if(+artno !== selectedArticle) {
+                dispatch({type: 'SET_SELECTED_ARTICLE', value: +artno})
+            }
         }
+
     }, [artno])
 
 
-    useEffect( () => {
+    useEffect(() => {
+        setArtno(selectedArticle)
         if (modals.artInfo && selectedArticle) {
-            setArtno(selectedArticle)
             fetchArtnoInfo(selectedArticle)
         }
-    },[selectedArticle])
+    }, [selectedArticle])
 
 
     return (
         <div className='article-info'>
             <div className='article-info__article-div'>
-                <MyInput
-                    placeholder='5-digit article num'
-                    value={artno}
-                    onChange={inputArtno}
-                    labeltext='article num'
-                />
+                <div className='article-div__input'>
+                    <MyInput
+                        placeholder='5-digit article num'
+                        value={artno}
+                        onChange={inputArtno}
+                        labeltext='article num'
+                    />
+                </div>
+                <span className='article-div__artname'>
+                    {filteredArticleList.ARTNAME}
+                </span>
+                <span className='article-div__status'>
+                    {defineStatus(filteredArticleList.STATUS)}
+                </span>
+                <NavButtons/>
             </div>
 
-            {/*<div>*/}
-            {/*    {Object.entries(filteredArticleList).map(item=>(*/}
-            {/*        <div>*/}
-            {/*            <span>{item.join(' - ')}</span>*/}
-            {/*        </div>*/}
-            {/*    ))}*/}
-            {/*</div>*/}
 
-            <div>{filteredArticleList.ARTNAME}</div>
-            <div>{filteredArticleList.GROUP_OF_GOODS}</div>
-            <div>{filteredArticleList.AVIN}</div>
-            <div>{filteredArticleList.CATEGORY}</div>
-            <div>{filteredArticleList.SIGNAL}</div>
-            <div>{filteredArticleList.STATUS}</div>
-            <div>{artnoInfo.SLoc}</div>
-            <div>{artnoInfo.SSD}</div>
-            <div>{artnoInfo.EDS}</div>
-            <div>{artnoInfo.MDQ}</div>
-            <div>{artnoInfo.NextDeliveryDate}</div>
-            <div>{artnoInfo.NextDeliveryQty}</div>
-            <div>{artnoInfo.Price}</div>
+            <ArticleParameters filteredArticleList={filteredArticleList} artnoInfo={artnoInfo}/>
 
             <MyChart graph={artnoInfo.graph}/>
 

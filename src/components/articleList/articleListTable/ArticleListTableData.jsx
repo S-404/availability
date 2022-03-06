@@ -9,8 +9,6 @@ const ArticleListTableData = ({columns}) => {
     const selectArticle=(article)=>{
         dispatch({type: 'SET_SELECTED_ARTICLE', value: article.ARTNO})
         dispatch({type: "SET_ARTICLE_INFO_MODAL", value: true})
-
-
     }
 
     return (
