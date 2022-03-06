@@ -1,10 +1,13 @@
 import React from 'react';
 import ArticleListTableItem from "./ArticleListTableItem";
 import {useDispatch, useSelector} from "react-redux";
+import {useArticleListPagination} from "../../../hooks/useArticleList";
 
 const ArticleListTableData = ({columns}) => {
     const articleList = useSelector(state => state.articleList);
+    const paginator = useSelector(state => state.paginator);
     const dispatch = useDispatch();
+    const articleListPage =  useArticleListPagination(articleList,paginator)
 
     const selectArticle=(article)=>{
         dispatch({type: 'SET_SELECTED_ARTICLE', value: article.ARTNO})
@@ -13,7 +16,7 @@ const ArticleListTableData = ({columns}) => {
 
     return (
         <div className='table__table-data'>
-            {articleList.map(article => (
+            {articleListPage.map(article => (
                 <ArticleListTableItem
                     key={`article_${article.ID}`}
                     article={article}

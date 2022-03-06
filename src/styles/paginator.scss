@@ -1,0 +1,25 @@
+.paginator {
+  display: flex;
+  flex-direction: row;
+  margin: .5em;
+
+  .paginator__button {
+    padding: .2em;
+    margin-right: .2em;
+    border-radius: .5em;
+    font-size: 1em;
+    border: .1em solid gray;
+    cursor: pointer;
+    &:hover{
+      background-color: #95A5A6;
+    }
+    &:active{
+      background-color: #708d70;
+    }
+  }
+
+  .paginator__button_current {
+    background-color: #9ad99a;
+    font-weight: bold;
+  }
+}
