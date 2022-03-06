@@ -30,7 +30,7 @@ const MyChart = ({graph}) => {
             },
             title: {
                 display: true,
-                text: 'Chart.js Line Chart',
+                text: 'Sales History',
             },
         },
     };

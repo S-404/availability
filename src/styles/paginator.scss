@@ -19,7 +19,19 @@
   }
 
   .paginator__button_current {
-    background-color: #9ad99a;
+    background-color: #598e96;
     font-weight: bold;
   }
+}
+
+@media all and (max-width: 800px) {
+
+  .paginator{
+    position: absolute;
+    bottom: 1em;
+
+    width: 100%;
+
+  }
+
 }

@@ -16,7 +16,8 @@
 
 :root {
     --border-radius-val: .5em;
-    --main-color:#b5e0e1
+    --main-color:#b5e0e1;
+    --media-min: 800px;
 }
 
 #root {
@@ -30,7 +31,7 @@
 }
 
 
-@media (min-width: 767px) {
+@media (min-width: 800px) {
     *{
         font-size: 2vmin;
     }

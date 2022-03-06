@@ -50,6 +50,9 @@
               cursor: zoom-in;
             }
           }
+          .table-data__table-row_selected{
+            background-color: #598e96;
+          }
 
           .table-data__col {
 
@@ -89,7 +92,7 @@
 }
 
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 800px) {
 
   .article-list {
     position: relative;
