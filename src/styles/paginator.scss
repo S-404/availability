@@ -1,7 +1,8 @@
-.paginator {
+.article-list__paginator {
   display: flex;
   flex-direction: row;
-  margin: .5em;
+  padding: .5em;
+  background-color: var(--main-color);
 
   .paginator__button {
     padding: .2em;
@@ -26,10 +27,9 @@
 
 @media all and (max-width: 800px) {
 
-  .paginator{
-    position: absolute;
-    bottom: 1em;
-
+  .article-list__paginator{
+    position: sticky;
+    bottom: 0;
     width: 100%;
 
   }

@@ -4,8 +4,9 @@
 }
 
 .myInput__input {
-    border-radius: 5px;
+    border-radius: .5rem;
     width: 100%;
-    padding: 15px 0 5px;
+    padding: 1rem 0 .5rem;
     text-align: center;
+    font-size: 1.2em;
 }

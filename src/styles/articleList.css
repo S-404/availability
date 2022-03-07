@@ -1,6 +1,5 @@
 .article-list .article-list__article_list-table {
   max-height: 50vh;
-  overflow-y: scroll;
 }
 .article-list .article-list__article_list-table .article-list__table-container {
   width: 100%;

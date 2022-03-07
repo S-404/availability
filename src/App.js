@@ -5,7 +5,6 @@ import {useFetching} from "./hooks/useFetching";
 import ArticleListService from "./services/articleListService";
 import {useDispatch} from "react-redux";
 import Modals from "./components/Modals";
-import Paginator from "./components/articleList/paginator/Paginator";
 
 function App() {
     const dispatch = useDispatch();
@@ -25,7 +24,7 @@ function App() {
                 isFetchingArticleList={isFetchingArticleList}
                 fetchingArticleListError={fetchingArticleListError}
             />
-            <Paginator/>
+
         </div>
     );
 }

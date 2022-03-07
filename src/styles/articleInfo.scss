@@ -110,25 +110,38 @@
 
 @media all and (max-width: 800px) {
   .article-info {
+
     .article-info__article-div {
       flex-direction: column;
 
       .article-div__nav-buttons {
-    position: unset;
+        position: unset;
       }
     }
 
     .article-info__chart-div {
       .chart-div__chart {
-        max-width: 80%;
+        max-width: 95%;
       }
     }
 
     .article-info__article-parameters {
       .article-parameters__parameters-group {
         width: 100%;
+
       }
     }
   }
 
+}
+
+@media all and (max-width: 450px) {
+  .article-info {
+    .article-info__article-parameters {
+      .article-parameters__parameters-group {
+
+        font-size: smaller;
+      }
+    }
+  }
 }

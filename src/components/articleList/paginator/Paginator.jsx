@@ -43,7 +43,7 @@ const Paginator = () => {
     if (!articleList.length) return null
 
     return (
-        <div className='paginator'>
+        <div className='article-list__paginator'>
             {Array.from({length: paginator.maxPage}, (v, k) => k + 1)
                 .map(pageNum => (
                     <button
