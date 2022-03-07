@@ -25,3 +25,16 @@
     justify-content: center;
     align-items: flex-start;
 }
+
+
+@media all and (max-width: 800px) {
+    .myModalContent {
+        /*max-width: 80vw;*/
+        margin: 0;
+
+        /*height: unset;*/
+        max-height: unset;
+        overflow-y: scroll;
+    }
+
+}

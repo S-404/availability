@@ -1,6 +1,5 @@
 .article-list .article-list__article_list-table {
   max-height: 50vh;
-  overflow-y: scroll;
 }
 .article-list .article-list__article_list-table .article-list__table-container {
   width: 100%;
@@ -31,6 +30,9 @@
   background-color: #c2c2c2;
   cursor: zoom-in;
 }
+.article-list .article-list__article_list-table .article-list__table-container .table-container__table .table__table-data .table-data__table-row_selected {
+  background-color: #598e96;
+}
 .article-list .table-container__table .table__col {
   min-width: 1em;
   text-align: center;
@@ -51,7 +53,7 @@
   flex-basis: 15%;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 800px) {
   .article-list {
     position: relative;
   }

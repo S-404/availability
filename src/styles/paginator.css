@@ -1,9 +1,10 @@
-.paginator {
+.article-list__paginator {
   display: flex;
   flex-direction: row;
-  margin: 0.5em;
+  padding: 0.5em;
+  background-color: var(--main-color);
 }
-.paginator .paginator__button {
+.article-list__paginator .paginator__button {
   padding: 0.2em;
   margin-right: 0.2em;
   border-radius: 0.5em;
@@ -11,15 +12,23 @@
   border: 0.1em solid gray;
   cursor: pointer;
 }
-.paginator .paginator__button:hover {
+.article-list__paginator .paginator__button:hover {
   background-color: #95A5A6;
 }
-.paginator .paginator__button:active {
+.article-list__paginator .paginator__button:active {
   background-color: #708d70;
 }
-.paginator .paginator__button_current {
-  background-color: #9ad99a;
+.article-list__paginator .paginator__button_current {
+  background-color: #598e96;
   font-weight: bold;
+}
+
+@media all and (max-width: 800px) {
+  .article-list__paginator {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=paginator.css.map */

@@ -1,10 +1,15 @@
 import React from 'react';
 
-const ArticleListTableItem = ({article,columns, selectArticle}) => {
+const ArticleListTableItem = ({article, columns, selectArticle, selectedArticle}) => {
+
+    const rowModifier = () => {
+        return article.ARTNO === selectedArticle ? 'table-data__table-row_selected' : ''
+    }
+
     return (
         <li
-            className="table-data__list-item table-data__table-row"
-            onClick={()=>selectArticle(article)}
+            className={`table-data__list-item table-data__table-row ${rowModifier()}`}
+            onClick={() => selectArticle(article)}
         >
             {columns.map((col, index) => (
                 <div

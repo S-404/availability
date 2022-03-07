@@ -8,6 +8,7 @@ const ArticleListTableData = ({columns}) => {
     const paginator = useSelector(state => state.paginator);
     const dispatch = useDispatch();
     const articleListPage =  useArticleListPagination(articleList,paginator)
+    const selectedArticle = useSelector(state => state.selectedArticle);
 
     const selectArticle=(article)=>{
         dispatch({type: 'SET_SELECTED_ARTICLE', value: article.ARTNO})
@@ -22,6 +23,7 @@ const ArticleListTableData = ({columns}) => {
                     article={article}
                     columns={columns}
                     selectArticle={selectArticle}
+                    selectedArticle={selectedArticle}
                 />
             ))}
         </div>

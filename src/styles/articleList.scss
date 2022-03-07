@@ -6,7 +6,6 @@
 
   .article-list__article_list-table {
     max-height: 50vh;
-    overflow-y: scroll;
     .article-list__table-container {
       width: 100%;
       margin-left: auto;
@@ -50,6 +49,9 @@
               cursor: zoom-in;
             }
           }
+          .table-data__table-row_selected{
+            background-color: #598e96;
+          }
 
           .table-data__col {
 
@@ -89,7 +91,7 @@
 }
 
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 800px) {
 
   .article-list {
     position: relative;

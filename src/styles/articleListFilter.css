@@ -31,9 +31,10 @@
   cursor: pointer;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 800px) {
   .filter-block .filter-block__filter_panel {
     flex-direction: column;
+    min-width: 90vw;
   }
   .filter-block .filter-block__filter_panel .filter_panel__ui_containers {
     flex-direction: column;

@@ -1,7 +1,8 @@
-.paginator {
+.article-list__paginator {
   display: flex;
   flex-direction: row;
-  margin: .5em;
+  padding: .5em;
+  background-color: var(--main-color);
 
   .paginator__button {
     padding: .2em;
@@ -19,7 +20,18 @@
   }
 
   .paginator__button_current {
-    background-color: #9ad99a;
+    background-color: #598e96;
     font-weight: bold;
   }
+}
+
+@media all and (max-width: 800px) {
+
+  .article-list__paginator{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+
+  }
+
 }

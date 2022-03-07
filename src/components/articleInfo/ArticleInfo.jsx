@@ -70,9 +70,9 @@ const ArticleInfo = () => {
                 <span className='article-div__artname'>
                     {filteredArticleList.ARTNAME}
                 </span>
-                <span className='article-div__status'>
-                    {defineStatus(filteredArticleList.STATUS)}
-                </span>
+                {/*<span className='article-div__status'>*/}
+                {/*    {defineStatus(filteredArticleList.STATUS)}*/}
+                {/*</span>*/}
                 <NavButtons/>
             </div>
 
